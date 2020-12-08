@@ -12,26 +12,18 @@
 }
 
 .footer {
-    background-color: #dbb08d;
+    background-color:#e2f3f5;
     margin: 0px auto;
     padding: 20px 0px 20px 0px;
 }
 
-.jumbotron {
-    padding: 70px 30px 70px 30px;
-    margin: 0px auto;
-    background: #6E3F19;
-    color: floralwhite;
-}
-
-address {
-    font-size: 80%;
-    margin: 0px;
-    color: #0f0f0f;
+.nav-link{
+    color: white !important;
 }
 
 .bg-light {
-    background-color: #dbb08d !important;
+    background-color: #074463 !important;
+    color: white!important;
 }
 
 body {
@@ -39,13 +31,12 @@ body {
     z-index: 0;
 }
 
-.table .thead-dark th {
-    color: floralwhite;
-    background-color: #6E3F19
+tr:hover {
+    background-color:#074463!important
 }
 
-tr:hover {
-    background-color: #dbb08db0!important
+.navbar-toggler{
+    background-color: white;
 }
 
 .tab-content {
@@ -56,7 +47,7 @@ tr:hover {
 }
 
 .carousel {
-    background: #914d15b0
+    background: #074463
 }
 
 .carousel-item {
