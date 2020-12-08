@@ -17,6 +17,7 @@
     padding: 20px 0px 20px 0px;
 }
 
+
 .nav-link{
     color: white !important;
 }
@@ -27,7 +28,7 @@
 }
 
 body {
-    padding: 50px 0px 0px 0px;
+    padding: 40px 0px 0px 0px;
     z-index: 0;
 }
 
@@ -39,19 +40,18 @@ tr:hover {
     background-color: white;
 }
 
-.tab-content {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-}
-
 .carousel {
     background: #074463
 }
 
 .carousel-item {
-    height: 300px;
+    min-height: 400px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .carousel-item img {
