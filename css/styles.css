@@ -10,10 +10,15 @@
     min-height: 400px;
 }
 
-
+/* The color of the nav bar links at the top */
 .nav-link{
-    color: white !important;
+    color: white !important;    
 }
+
+/* The color of the active link in the nav bar */
+.navbar-nav > .active > a {
+    color: aqua!important;   
+  }
 
 .bg-light {
     background-color: #074463 !important;
@@ -23,6 +28,7 @@
 body {
     padding: 40px 0px 0px 0px;
     z-index: 0;
+    background-color: #e2f3f5;
 }
 
 tr:hover {
@@ -61,26 +67,24 @@ tr:hover {
     z-index: +1;
 }
 
-body{
-    background-color: #e2f3f5;
-}
-
 .video-container {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
-  }
+}
 
-  .video {
+.video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: 0;
-  }
+}
 
-
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > 
+.active > a:hover, .navbar-default .navbar-nav > .active > a:focus 
+{ color: #333333!important; /* <----- change your color here*/ background-color: black; }
 
 .accordion-section .panel-default > .panel-heading {
     border: 0;
@@ -106,7 +110,7 @@ body{
 }
 .accordion-section .panel-default .panel-body {
     font-size: 1.2rem;
-}
+} 
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
@@ -122,7 +126,7 @@ body{
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+.accordion:hover {
   background-color: #ccc;
 }
 
