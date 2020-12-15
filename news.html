@@ -29,10 +29,10 @@
             </button>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="./index.html"><span
-                                class="fa fa-home fa-lg"></span>
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span>
                             HOME</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-newspaper-o fa-lg"></span>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span
+                                class="fa fa-newspaper-o fa-lg"></span>
                             NEWS</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="./guidelines.html"><span
@@ -51,7 +51,7 @@
 
         <div class="row row-content">
             <div class="col-sm-12">
-                
+
                 <div id="NewsCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#NewsCarousel" data-slide-to="0" class="active"></li>
@@ -61,7 +61,8 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <a href="https://www.bbc.co.uk/search?q=coronavirus" target="_blank">
-                                <img class="d-block w-100" src="https://i.ibb.co/MP7YYTN/bbc-News.jpg" alt="BBC Latest Coronavirus News">
+                                <img class="d-block w-100" src="https://i.ibb.co/MP7YYTN/bbc-News.jpg"
+                                    alt="BBC Latest Coronavirus News">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>BBC Latest Coronavirus News</h5>
                                 </div>
@@ -70,7 +71,8 @@
                         </div>
                         <div class="carousel-item">
                             <a href="https://www.nytimes.com/search?query=Coronavirus" target="_blank">
-                                <img class="d-block w-100" src="https://i.ibb.co/rGmBpNt/nbcNews.jpg" alt="New York Times Coronavirus Updates">
+                                <img class="d-block w-100" src="https://i.ibb.co/rGmBpNt/nbcNews.jpg"
+                                    alt="New York Times Coronavirus Updates">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>New York Times Coronavirus Updates</h5>
                                 </div>
@@ -79,7 +81,8 @@
                         <div class="carousel-item">
                             <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/media-resources/news"
                                 target="_blank">
-                                <img class="d-block w-100" src="https://i.ibb.co/nLGL2R8/whoNews.jpg" alt="WHO Coronavirus News">
+                                <img class="d-block w-100" src="https://i.ibb.co/nLGL2R8/whoNews.jpg"
+                                    alt="WHO Coronavirus News">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>World Health Organisation Coronavirus News</h5>
                                 </div>
@@ -211,12 +214,37 @@
         </section>
     </footer>
 
-    <!-- build:js js/main.js -->
+
+    <script>
+        //-------------REAL TIME DATA FOR CARDS IN NEWS-------------//
+        var total_cases = document.getElementById("total_cases");
+        var total_death = document.getElementById("total_death");
+        var total_recovered = document.getElementById("total_recovered");
+        //Fetching the World Data
+        fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+                "x-rapidapi-key": "f93ff5e3afmsh1c47b09be99cc61p1ca087jsnbd673fdc9881"
+            }
+        }).then(response => response.json().then(data => {
+            console.log(data);
+            total_cases.innerHTML = data.total_cases;
+            total_death.innerHTML = data.total_deaths;
+            total_recovered.innerHTML = data.total_recovered;
+        })).catch(err => {
+            console.log(err);
+        });
+    </script>
+
+
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 
     <!-- link my script -->
     <script src="js/scripts.js"></script>
