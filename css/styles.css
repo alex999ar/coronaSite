@@ -17,11 +17,11 @@
 
 /* The color of the active link in the nav bar */
 .navbar-nav > .active > a {
-    color: aqua!important;   
+    color: black!important;   
   }
 
 .bg-light {
-    background-color: #074463 !important;
+    background-color: #1f7de2 !important;
     color: white!important;
 }
 
@@ -165,12 +165,11 @@ section {
 section .section-title {
   text-align: center;
   color: #0c73cc;
-  margin-bottom: 50px;
   text-transform: uppercase;
 }
 
 #footer {
-  background: #074463 !important;
+  background: #1f7de2 !important;
 }
 #footer h5{
 padding-left: 10px;
@@ -236,9 +235,9 @@ margin-right: 5px;
 /* Seif */
 
 #about-us{display:block; width:100%; line-height:1.6em;}
-#about-us h2{margin-bottom:50px; padding-bottom:40px; font-size:45px; text-align:center; text-transform:uppercase; border-bottom:1px solid #CCCCCC;} /* DEMO USE ONLY - CAN BE DELETED */
+#about-us h2{font-size:45px; text-align:center; text-transform:uppercase; border-bottom:1px solid #CCCCCC;} /* DEMO USE ONLY - CAN BE DELETED */
 
-#about-us #about-intro{margin-bottom:50px;}
+
 #about-us #about-intro p{margin:20px 0 0 0; }
 #about-us #about-intro p:first-child{margin-top:0;}
 
@@ -448,9 +447,6 @@ P {display:block; width:100%; line-height:1.6em;}
   }
 
   @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-  section {
-      padding: 60px 0;
-  }
   
   section .section-title {
       text-align: center;
